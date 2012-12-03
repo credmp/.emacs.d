@@ -58,8 +58,8 @@
 (global-set-key (kbd "C-<f10>") 'menu-bar-mode)
 
 ;; Use shell-like backspace C-h, rebind help to F1
-(define-key key-translation-map [?\C-h] [?\C-?])
-(global-set-key (kbd "<f1>") 'help-command)
+;; (define-key key-translation-map [?\C-h] [?\C-?])
+;; (global-set-key (kbd "<f1>") 'help-command)
 
 ;; Transpose stuff with M-t
 (global-unset-key (kbd "M-t")) ;; which used to be transpose-words

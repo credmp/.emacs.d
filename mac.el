@@ -4,7 +4,7 @@
 (setq ns-function-modifier 'hyper)
 
 ;; mac friendly font
-(set-face-attribute 'default nil :font "Monaco-16")
+(set-face-attribute 'default nil :font "Monaco-12")
 
 ;; make sure path is correct when launched as application
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
