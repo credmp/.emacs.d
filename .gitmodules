@@ -95,26 +95,17 @@
         path = site-lisp/change-inner
         url = https://github.com/magnars/change-inner.el.git
 [submodule "site-lisp/crappy-jsp-mode"]
-	path = site-lisp/crappy-jsp-mode
-	url = git://github.com/magnars/crappy-jsp-mode.git
+        path = site-lisp/crappy-jsp-mode
+        url = git://github.com/magnars/crappy-jsp-mode.git
 [submodule "site-lisp/s"]
-	path = site-lisp/s
-	url = https://github.com/magnars/s.el.git
+        path = site-lisp/s
+        url = https://github.com/magnars/s.el.git
 [submodule "site-lisp/dash"]
-	path = site-lisp/dash
-	url = https://github.com/magnars/dash.el.git
+        path = site-lisp/dash
+        url = https://github.com/magnars/dash.el.git
 [submodule "site-lisp/multifiles"]
-	path = site-lisp/multifiles
-	url = https://github.com/magnars/multifiles.el.git
+        path = site-lisp/multifiles
+        url = https://github.com/magnars/multifiles.el.git
 [submodule "site-lisp/emacs-eclim"]
-	path = site-lisp/emacs-eclim
-	url = https://github.com/senny/emacs-eclim.git
-[submodule "site-lisp/auto-complete"]
-	path = site-lisp/auto-complete
-	url = https://github.com/auto-complete/auto-complete.git
-[submodule "site-lisp/popup"]
-	path = site-lisp/popup
-	url = https://github.com/auto-complete/popup-el.git
-[submodule "site-lisp/fuzzy"]
-	path = site-lisp/fuzzy
-	url = https://github.com/auto-complete/fuzzy-el.git
+        path = site-lisp/emacs-eclim
+        url = https://github.com/senny/emacs-eclim.git
