@@ -1,3 +1,9 @@
+;; Arjen's .emacs <arjen@wiersma.org>
+;; Started in june 2000, Last modification:
+;; Time-stamp: <2012-09-25 15:26:24 (arjen)>
+;; Now based on magnars's .emacs.d setup
+;; https://github.com/magnars/.emacs.d
+
 ;; Turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
