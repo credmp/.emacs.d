@@ -67,7 +67,9 @@
    (cons 'gitignore-mode melpa)
    (cons 'clojure-mode melpa)
    (cons 'clojure-test-mode melpa)
-   (cons 'nrepl melpa)))
+   (cons 'nrepl melpa)
+   (cons 'auto-complete melpa)
+))
 
 (condition-case nil
     (init--install-packages)
@@ -95,6 +97,7 @@
 (require 'setup-ffip)
 (require 'setup-html-mode)
 (require 'setup-paredit)
+(require 'setup-eclim)
 
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))

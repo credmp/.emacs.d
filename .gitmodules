@@ -106,3 +106,15 @@
 [submodule "site-lisp/multifiles"]
 	path = site-lisp/multifiles
 	url = https://github.com/magnars/multifiles.el.git
+[submodule "site-lisp/emacs-eclim"]
+	path = site-lisp/emacs-eclim
+	url = https://github.com/senny/emacs-eclim.git
+[submodule "site-lisp/auto-complete"]
+	path = site-lisp/auto-complete
+	url = https://github.com/auto-complete/auto-complete.git
+[submodule "site-lisp/popup"]
+	path = site-lisp/popup
+	url = https://github.com/auto-complete/popup-el.git
+[submodule "site-lisp/fuzzy"]
+	path = site-lisp/fuzzy
+	url = https://github.com/auto-complete/fuzzy-el.git
