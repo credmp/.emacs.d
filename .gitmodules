@@ -109,3 +109,6 @@
 [submodule "site-lisp/emacs-eclim"]
         path = site-lisp/emacs-eclim
         url = https://github.com/senny/emacs-eclim.git
+[submodule "site-list/emacs-eclim"]
+	path = site-list/emacs-eclim
+	url = https://github.com/senny/emacs-eclim.git
