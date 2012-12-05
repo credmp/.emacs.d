@@ -69,6 +69,7 @@
    (cons 'clojure-test-mode melpa)
    (cons 'nrepl melpa)
    (cons 'auto-complete melpa)
+   (cons 'company gnu)
 ))
 
 (condition-case nil
@@ -97,6 +98,7 @@
 (require 'setup-ffip)
 (require 'setup-html-mode)
 (require 'setup-paredit)
+(require 'setup-autocomplete)
 (require 'setup-eclim)
 
 ;; Language specific setup files

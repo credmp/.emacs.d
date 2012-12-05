@@ -15,7 +15,7 @@
                               ""])))
 
 ;; Various superfluous white-space. Just say no.
-(add-hook 'before-save-hook 'cleanup-buffer-safe)
+;;(add-hook 'before-save-hook 'cleanup-buffer-safe)
 
 ;; Newline after inserting closing tag in html-mode
 (defadvice sgml-close-tag (after close-tag-then-newline activate)
