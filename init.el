@@ -143,12 +143,13 @@
 (require 'smex)
 (smex-initialize)
 
-;; Setup key bindings
-(require 'key-bindings)
-
 ;; Misc
 (require 'appearance)
 (require 'my-misc)
+
+;; Setup key bindings
+(require 'key-bindings)
+
 (when is-mac (require 'mac))
 
 ;; Elisp go-to-definition with M-. and back again with M-,

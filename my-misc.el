@@ -27,5 +27,18 @@
 ;; A bit of misc cargo culting in misc.el
 (setq xterm-mouse-mode t)
 
+;;
+;; kills all open buffers
+;;
+(defun kill-all-buffers ()
+  "Kill all open buffers, recreates *scratch* buffer"
+  (interactive)
+  (setq buf_list (buffer-list) )
+  (while buf_list
+    (kill-buffer (car buf_list) )
+    (setq buf_list (cdr buf_list) )
+    )
+  (create-scratch-buffer)
+  )
 
 (provide 'my-misc)
