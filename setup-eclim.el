@@ -19,4 +19,18 @@
           (lambda ()
             (add-to-list 'ac-sources 'ac-source-emacs-eclim)))
 
+
+(defcustom eclim-java-field-prefixes "\\(s_\\|m_\\)\\(.*\\)"
+  "this variable contains a regular expression matching the java field
+  prefixes. The prefixes get removed when using yasnippet to generate
+  getter and setter methods. This variable allows you to have field
+  names like 'm_username' and get method names like 'setUsername' and 'getUsername'"
+  :group 'eclim-java
+  :type 'regexp)
+
+(defun eclim--java-symbol-remove-prefix (name)
+  (if (string-match eclim-java-field-prefixes name)
+      (match-string 2 name)
+    name))
+
 (provide 'setup-eclim)
