@@ -112,3 +112,6 @@
 [submodule "site-list/emacs-eclim"]
 	path = site-list/emacs-eclim
 	url = https://github.com/senny/emacs-eclim.git
+[submodule "site-lisp/yasnippet-java-mode"]
+	path = site-lisp/yasnippet-java-mode
+	url = https://github.com/nekop/yasnippet-java-mode.git
