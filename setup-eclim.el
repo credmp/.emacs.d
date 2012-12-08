@@ -3,7 +3,7 @@
 (setq eclim-eclipse-dirs '("~/Applications/eclipse"))
 (setq eclim-executable "~/Applications/eclipse/eclim")
 (setq eclimd-default-workspace "~/Development/workspace")
-
+(setq eclim-use-yasnippet nil)
 (setq eclim-auto-save t)
 (global-eclim-mode)
 
@@ -17,6 +17,7 @@
 (require 'ac-emacs-eclim-source)
 (add-hook 'eclim-mode-hook
           (lambda ()
+            (electric-pair-mode t)
             (add-to-list 'ac-sources 'ac-source-emacs-eclim)))
 
 
@@ -32,5 +33,6 @@
   (if (string-match eclim-java-field-prefixes name)
       (match-string 2 name)
     name))
+
 
 (provide 'setup-eclim)
