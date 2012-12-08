@@ -255,6 +255,7 @@
 
 ;; Find file in project, with specific patterns
 (global-unset-key (kbd "C-x C-o")) ;; which used to be delete-blank-lines (also bound to C-c C-<return>)
+(global-set-key (kbd "C-x C-o a") (ffip-create-pattern-file-finder "*.*"))
 (global-set-key (kbd "C-x C-o ja") (ffip-create-pattern-file-finder "*.java"))
 (global-set-key (kbd "C-x C-o js") (ffip-create-pattern-file-finder "*.js"))
 (global-set-key (kbd "C-x C-o jp") (ffip-create-pattern-file-finder "*.jsp"))
