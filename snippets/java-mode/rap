@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: result.append
+# key: rap
+# --
+result.append("$1 = " + "[" + $1 + "]" + NEW_LINE);
+$0
