@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>.emacs.d by credmp</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">.emacs.d</h1>
+        <p class="header">My personal emacs settings based on the work of magnars (@emacsrocks.com)</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/credmp/.emacs.d/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/credmp/.emacs.d/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/credmp/.emacs.d">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/credmp">credmp</a></p>
+
+
+      </header>
+      <section>
+        <h1>My emacs settings</h1>
+
+<p>An ever-changing set of emacs settings. Micro-optimizations are super fun.
+These are used in the <a href="http://emacsrocks.com">Emacs Rocks</a> screencasts.</p>
+
+<h2>Setup</h2>
+
+<p>To grab all the dependencies, either:</p>
+
+<pre><code>git clone git://github.com/magnars/.emacs.d.git
+cd .emacs.d
+git submodule init
+git submodule update
+</code></pre>
+
+<p>or on git v1.6.5 or later:</p>
+
+<pre><code>git clone --recursive git://github.com/magnars/.emacs.d.git
+</code></pre>
+
+<p>The first time you start emacs, it will install some additional packages
+that are best handled by the package manager.</p>
+
+<h2>Install emacs on mac</h2>
+
+<p>I use Cocoa Emacs, installed like this:</p>
+
+<pre><code>brew install emacs --cocoa
+</code></pre>
+
+<p>You can also get the very latest Emacs:</p>
+
+<pre><code>brew install emacs --cocoa --use-git-head --HEAD
+</code></pre>
+
+<p>To open it with Alfred or Quicksilver, you have to copy <code>Emacs.app</code> into
+<code>/Applications</code> instead of the symlink that brew places there.</p>
+
+<h2>Tips for using these emacs settings</h2>
+
+<p>If you want to use my settings straight out of the box, here are some things to note:</p>
+
+<ul>
+<li><p>The key bindings are optimized for a norwegian keyboard layout.</p></li>
+<li><p>Start by reading up on all the cool stuff in key-bindings.el.</p></li>
+<li><p>You quit emacs with <code>C-x r q</code>, mnemonic <em>Really Quit</em>.</p></li>
+<li><p>Find file in project with <code>C-x o</code>, in dir with <code>C-x C-f</code>, recent with <code>C-x f</code></p></li>
+<li><p>Add your user- and project-specific stuff in .emacs.d/users/[machine name]/*.el</p></li>
+<li><p><code>C-h</code> is rebound to backspace, like in the shell. Get help on <code>F1</code> instead.</p></li>
+<li><p>Autocomplete with <code>C-.</code></p></li>
+<li><p>expand-region is your friend. Find its bound key by doing <code>F1 f er/expand-region</code></p></li>
+<li><p>annoying-arrows suggests alternative ways of moving around if you use the
+arrow keys excessively.</p></li>
+<li><p>Undo with <code>C-_</code> and redo with <code>M-_</code>. Watch the undo-tree with <code>C-x u</code></p></li>
+<li><p>Easily add functions to the F-keys with <code>M-: (f5 &lt;sexps here&gt;)</code>, example <code>(f5 (flush-lines "console.log"))</code></p></li>
+<li><p>Quickly jump anywhere in the buffer by pressing <code>fn</code> plus the starting letter of a word.</p></li>
+<li><p>Indent and clean up white space in the entire buffer with <code>C-c n</code></p></li>
+<li><p>On a mac, the Meta key <code>M</code> is bound to Command.</p></li>
+<li><p>I recommend rebinding Caps Lock to Ctrl and use that instead of the often badly placed Ctrl-key.</p></li>
+<li><p>Watch <a href="http://emacsrocks.com">emacsrocks.com</a></p></li>
+</ul><h2>Survival guide for the first week of emacs</h2>
+
+<p>When you start using emacs for the first time, your habits fight you every inch
+of the way. Your fingers long for the good old familiar keybindings. Here's an
+overview of the most commonly used shortcuts to get you through this pain:</p>
+
+<ul>
+<li>
+<code>C</code> Shorthand for the ctrl-key</li>
+<li>
+<code>M</code> Shorthand for the meta-key (bound to cmd on my mac settings)</li>
+<li>
+<code>S</code> Shorthand for the shift-key</li>
+</ul><h3>Files</h3>
+
+<ul>
+<li>
+<code>C-x C-f</code> Open a file. Starts in the current directory</li>
+<li>
+<code>C-x f</code> Open a recently visited file</li>
+<li>
+<code>C-x o</code> Open a file in the current project (based on .git ++)</li>
+<li>
+<code>C-x C-s</code> Save this file</li>
+<li>
+<code>C-x C-w</code> Save as ...</li>
+<li>
+<code>C-x C-j</code> Jump to this files' current directory</li>
+<li>
+<code>C-x b</code> Switch to another open file (buffer)</li>
+<li>
+<code>C-x C-b</code> List all open files (buffers)</li>
+</ul><h3>Cut copy and paste</h3>
+
+<ul>
+<li>
+<code>C-space</code> Start marking stuff. C-g to cancel.</li>
+<li>
+<code>C-w</code> Cut (aka kill)</li>
+<li>
+<code>C-k</code> Cut till end of line</li>
+<li>
+<code>M-w</code> Copy</li>
+<li>
+<code>C-y</code> Paste (aka yank)</li>
+<li>
+<code>M-y</code> Cycle last paste through previous kills</li>
+<li>
+<code>C-x C-y</code> Choose what to paste from previous kills</li>
+<li>
+<code>C-@</code> Mark stuff quickly. Press multiple times</li>
+</ul><h3>General</h3>
+
+<ul>
+<li>
+<code>C-g</code> Quit out of whatever mess you've gotten yourself into</li>
+<li>
+<code>M-x</code> Run a command by name</li>
+<li>
+<code>C-.</code> Autocomplete</li>
+<li>
+<code>C-_</code> Undo</li>
+<li>
+<code>M-_</code> Redo</li>
+<li>
+<code>C-x u</code> Show the undo-tree</li>
+<li>
+<code>C-x m</code> Open magit. It's a magical git interface for emacs</li>
+</ul><h3>Navigation</h3>
+
+<ul>
+<li>
+<code>C-arrow</code> Move past words/paragraphs</li>
+<li>
+<code>C-a</code> Go to indentation, then start of line</li>
+<li>
+<code>C-e</code> Go to end of line</li>
+<li>
+<code>M-g M-g</code> Go to line number</li>
+<li>
+<code>C-x C-i</code> Go to symbol</li>
+<li>
+<code>C-s</code> Search forward. Press <code>C-s</code> again to go further.</li>
+<li>
+<code>C-r</code> Search backward. Press <code>C-r</code> again to go further.</li>
+</ul><h3>Window management</h3>
+
+<ul>
+<li>
+<code>C-x 0</code> Close this window</li>
+<li>
+<code>C-x 1</code> Close other windows</li>
+<li>
+<code>C-x 2</code> Split window horizontally</li>
+<li>
+<code>C-x 3</code> Split window vertically</li>
+<li>
+<code>S-arrow</code> Jump to window to the left/right/up/down</li>
+</ul><h3>Help</h3>
+
+<ul>
+<li>
+<code>F1 t</code> Basic tutorial</li>
+<li>
+<code>F1 k</code> Help for a keybinding</li>
+<li>
+<code>F1 r</code> Emacs' extensive documentation</li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
