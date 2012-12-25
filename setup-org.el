@@ -10,6 +10,15 @@
 (defadvice kill-whole-line (after fix-cookies activate)
   (myorg-update-parent-cookie))
 
+(setq org-fontify-done-headline t)
+(custom-set-faces
+ '(org-done ((t (:foreground "PaleGreen"   
+                             :weight normal
+                             :strike-through t))))
+ '(org-headline-done 
+   ((((class color) (min-colors 16) (background dark)) 
+     (:foreground "LightSalmon" :strike-through t)))))
+
 ;; Publishing
 (require 'org-publish)
 (setq org-publish-project-alist
