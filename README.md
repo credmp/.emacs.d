@@ -7,21 +7,25 @@ These are used in the [Emacs Rocks](http://emacsrocks.com) screencasts.
 
 To grab all the dependencies, either:
 
-    git clone git://github.com/magnars/.emacs.d.git
+    git clone git://github.com/credmp/.emacs.d.git
     cd .emacs.d
     git submodule init
     git submodule update
 
 or on git v1.6.5 or later:
 
-    git clone --recursive git://github.com/magnars/.emacs.d.git
+    git clone --recursive git://github.com/credmp/.emacs.d.git
 
 The first time you start emacs, it will install some additional packages
 that are best handled by the package manager.
 
 ## Install emacs on mac
 
-I use Cocoa Emacs, installed like this:
+I use a pre-built binary from:
+    
+    http://emacsformacosx.com/
+
+You can also use Cocoa Emacs, installed like this:
 
     brew install emacs --cocoa
 
@@ -31,6 +35,26 @@ You can also get the very latest Emacs:
 
 To open it with Alfred or Quicksilver, you have to copy `Emacs.app` into
 `/Applications` instead of the symlink that brew places there.
+
+## Modifications in this repository
+
+I forked the repository from [Magnars](https://github.com/magnars/.emacs.d).
+
+The changes I made are in the following areas:
+
+### Java editing
+
+I added support for [Eclim](http://eclim.org/) / [Emacs-Eclim](https://github.com/senny/emacs-eclim). 
+
+ * `C-x C-o ja` - Open java file in current project
+ * `C-x C-o a` - Open any file in current project
+
+I also integrated the yasnippets from [nekop's java-mode yasnippets](https://github.com/nekop/yasnippet-java-mode) and 
+adjusted the package `pa` snippet to work correctly for Maven projects.
+
+### Org-Mode editing
+
+Support for org-mode editing was also added.
 
 ## Tips for using these emacs settings
 
@@ -45,8 +69,6 @@ If you want to use my settings straight out of the box, here are some things to 
  * Find file in project with `C-x o`, in dir with `C-x C-f`, recent with `C-x f`
 
  * Add your user- and project-specific stuff in .emacs.d/users/[machine name]/*.el
-
- * `C-h` is rebound to backspace, like in the shell. Get help on `F1` instead.
 
  * Autocomplete with `C-.`
 
@@ -65,19 +87,7 @@ If you want to use my settings straight out of the box, here are some things to 
 
  * On a mac, the Meta key `M` is bound to Command.
 
- * I recommend rebinding Caps Lock to Ctrl and use that instead of the often badly placed Ctrl-key.
-
- * Watch [emacsrocks.com](http://emacsrocks.com)
-
-## Survival guide for the first week of emacs
-
-When you start using emacs for the first time, your habits fight you every inch
-of the way. Your fingers long for the good old familiar keybindings. Here's an
-overview of the most commonly used shortcuts to get you through this pain:
-
-* `C      ` Shorthand for the ctrl-key
-* `M      ` Shorthand for the meta-key (bound to cmd on my mac settings)
-* `S      ` Shorthand for the shift-key
+ * Watch [emacsrocks.com](http://emacsrocks.com) for a lot of good pointers
 
 ### Files
 
@@ -129,8 +139,3 @@ overview of the most commonly used shortcuts to get you through this pain:
 * `C-x 3  ` Split window vertically
 * `S-arrow` Jump to window to the left/right/up/down
 
-### Help
-
-* `F1 t   ` Basic tutorial
-* `F1 k   ` Help for a keybinding
-* `F1 r   ` Emacs' extensive documentation
