@@ -39,7 +39,7 @@ These are used in the <a href="http://emacsrocks.com">Emacs Rocks</a> screencast
 
 <p>To grab all the dependencies, either:</p>
 
-<pre><code>git clone git://github.com/magnars/.emacs.d.git
+<pre><code>git clone git://github.com/credmp/.emacs.d.git
 cd .emacs.d
 git submodule init
 git submodule update
@@ -47,7 +47,7 @@ git submodule update
 
 <p>or on git v1.6.5 or later:</p>
 
-<pre><code>git clone --recursive git://github.com/magnars/.emacs.d.git
+<pre><code>git clone --recursive git://github.com/credmp/.emacs.d.git
 </code></pre>
 
 <p>The first time you start emacs, it will install some additional packages
@@ -55,7 +55,12 @@ that are best handled by the package manager.</p>
 
 <h2>Install emacs on mac</h2>
 
-<p>I use Cocoa Emacs, installed like this:</p>
+<p>I use a pre-built binary from:</p>
+
+<pre><code>http://emacsformacosx.com/
+</code></pre>
+
+<p>You can also use Cocoa Emacs, installed like this:</p>
 
 <pre><code>brew install emacs --cocoa
 </code></pre>
@@ -68,6 +73,28 @@ that are best handled by the package manager.</p>
 <p>To open it with Alfred or Quicksilver, you have to copy <code>Emacs.app</code> into
 <code>/Applications</code> instead of the symlink that brew places there.</p>
 
+<h2>Modifications in this repository</h2>
+
+<p>I forked the repository from <a href="https://github.com/magnars/.emacs.d">Magnars</a>.</p>
+
+<p>The changes I made are in the following areas:</p>
+
+<h3>Java editing</h3>
+
+<p>I added support for <a href="http://eclim.org/">Eclim</a> / <a href="https://github.com/senny/emacs-eclim">Emacs-Eclim</a>. </p>
+
+<ul>
+<li>
+<code>C-x C-o ja</code> - Open java file in current project</li>
+<li>
+<code>C-x C-o a</code> - Open any file in current project</li>
+</ul><p>I also integrated the yasnippets from <a href="https://github.com/nekop/yasnippet-java-mode">nekop's java-mode yasnippets</a> and 
+adjusted the package <code>pa</code> snippet to work correctly for Maven projects.</p>
+
+<h3>Org-Mode editing</h3>
+
+<p>Support for org-mode editing was also added.</p>
+
 <h2>Tips for using these emacs settings</h2>
 
 <p>If you want to use my settings straight out of the box, here are some things to note:</p>
@@ -78,7 +105,6 @@ that are best handled by the package manager.</p>
 <li><p>You quit emacs with <code>C-x r q</code>, mnemonic <em>Really Quit</em>.</p></li>
 <li><p>Find file in project with <code>C-x o</code>, in dir with <code>C-x C-f</code>, recent with <code>C-x f</code></p></li>
 <li><p>Add your user- and project-specific stuff in .emacs.d/users/[machine name]/*.el</p></li>
-<li><p><code>C-h</code> is rebound to backspace, like in the shell. Get help on <code>F1</code> instead.</p></li>
 <li><p>Autocomplete with <code>C-.</code></p></li>
 <li><p>expand-region is your friend. Find its bound key by doing <code>F1 f er/expand-region</code></p></li>
 <li><p>annoying-arrows suggests alternative ways of moving around if you use the
@@ -88,21 +114,7 @@ arrow keys excessively.</p></li>
 <li><p>Quickly jump anywhere in the buffer by pressing <code>fn</code> plus the starting letter of a word.</p></li>
 <li><p>Indent and clean up white space in the entire buffer with <code>C-c n</code></p></li>
 <li><p>On a mac, the Meta key <code>M</code> is bound to Command.</p></li>
-<li><p>I recommend rebinding Caps Lock to Ctrl and use that instead of the often badly placed Ctrl-key.</p></li>
-<li><p>Watch <a href="http://emacsrocks.com">emacsrocks.com</a></p></li>
-</ul><h2>Survival guide for the first week of emacs</h2>
-
-<p>When you start using emacs for the first time, your habits fight you every inch
-of the way. Your fingers long for the good old familiar keybindings. Here's an
-overview of the most commonly used shortcuts to get you through this pain:</p>
-
-<ul>
-<li>
-<code>C</code> Shorthand for the ctrl-key</li>
-<li>
-<code>M</code> Shorthand for the meta-key (bound to cmd on my mac settings)</li>
-<li>
-<code>S</code> Shorthand for the shift-key</li>
+<li><p>Watch <a href="http://emacsrocks.com">emacsrocks.com</a> for a lot of good pointers</p></li>
 </ul><h3>Files</h3>
 
 <ul>
@@ -188,15 +200,6 @@ overview of the most commonly used shortcuts to get you through this pain:</p>
 <code>C-x 3</code> Split window vertically</li>
 <li>
 <code>S-arrow</code> Jump to window to the left/right/up/down</li>
-</ul><h3>Help</h3>
-
-<ul>
-<li>
-<code>F1 t</code> Basic tutorial</li>
-<li>
-<code>F1 k</code> Help for a keybinding</li>
-<li>
-<code>F1 r</code> Emacs' extensive documentation</li>
 </ul>
       </section>
       <footer>
