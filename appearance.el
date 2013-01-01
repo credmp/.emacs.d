@@ -3,7 +3,10 @@
       color-theme-is-global t
       truncate-partial-width-windows nil)
 
-(set-face-background 'region "#464740")
+;;(set-face-background 'region "#464740")
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'zenburn t)
 
 ;; Highlight current line
 (global-hl-line-mode 1)
