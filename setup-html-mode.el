@@ -25,6 +25,8 @@
     (indent-region beg (+ end 11))
     (goto-char (+ beg 4))))
 
+(setq nxml-slash-auto-complete-flag t)
+
 (eval-after-load "sgml-mode"
   '(progn
      (define-key html-mode-map (kbd "C-<down>") 'skip-to-next-blank-line)
