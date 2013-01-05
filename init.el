@@ -4,9 +4,12 @@
 ;; Now based on magnars's .emacs.d setup
 ;; https://github.com/magnars/.emacs.d
 
+;; Are we on a mac?
+(setq is-mac (equal system-type 'darwin))
+
 ;; Turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(when is-mac (menu-bar-mode -1))
+(when is-mac (menu-bar-mode 1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
@@ -42,9 +45,6 @@
 (require 'saveplace)
 (setq-default save-place t)
 (setq save-place-file (expand-file-name ".places" dotfiles-dir))
-
-;; Are we on a mac?
-(setq is-mac (equal system-type 'darwin))
 
 ;; Setup elnode before packages to stop it from starting a server
 (require 'setup-elnode)
