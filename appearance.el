@@ -5,8 +5,8 @@
 
 ;;(set-face-background 'region "#464740")
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'zenburn t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/color-theme-solarized")
+(load-theme 'solarized-light t)
 
 ;; Highlight current line
 (global-hl-line-mode 1)
@@ -15,7 +15,7 @@
 (global-linum-mode t)
 
 ;; Customize background color of lighlighted line
-(set-face-background 'hl-line "#222222")
+(set-face-background 'hl-line "#e9e2cb")
 
 ;; Highlight in yasnippet
 (set-face-background 'yas/field-highlight-face "#333399")
