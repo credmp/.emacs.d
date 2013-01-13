@@ -121,3 +121,6 @@
 [submodule "site-lisp/worklog"]
 	path = site-lisp/worklog
 	url = https://github.com/credmp/worklog.git
+[submodule "themes/tomorrow-theme"]
+	path = themes/tomorrow-theme
+	url = https://github.com/chriskempson/tomorrow-theme.git

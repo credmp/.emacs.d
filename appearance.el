@@ -6,7 +6,8 @@
 ;;(set-face-background 'region "#464740")
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-(load-theme 'Jadedragon t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/tomorrow-theme/GNU Emacs/")
+(load-theme 'tomorrow-night t)
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/color-theme-solarized")
 ;;(load-theme 'solarized-light t)
 
