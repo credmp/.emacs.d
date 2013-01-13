@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: highlight
+# key: high
+# --
+{% highlight $1 %}
+$0
+{% endhighlight %}
