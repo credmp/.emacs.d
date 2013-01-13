@@ -102,6 +102,7 @@
 (require 'setup-autocomplete)
 (require 'setup-eclim)
 (require 'setup-hexcolour)
+(require 'setup-powerline)
 
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
