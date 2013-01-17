@@ -20,6 +20,11 @@
             (electric-pair-mode t)
             (add-to-list 'ac-sources 'ac-source-emacs-eclim)))
 
+(add-hook 'java-mode-hook
+          (lambda ()
+            (eclim-mode t)
+            )
+          )
 
 (defcustom eclim-java-field-prefixes "\\(s_\\|m_\\)\\(.*\\)"
   "this variable contains a regular expression matching the java field
