@@ -26,6 +26,10 @@
             )
           )
 
+(custom-set-faces
+ '(eclim-problems-highlight-error-face ((t (:background "#1D1515" :foreground "#d13120" :underline "red"))))
+ '(eclim-problems-highlight-warning-face ((t (:background "#251c1e" :foreground "#b23f1e" :underline "orange" :weight bold)))))
+
 (defcustom eclim-java-field-prefixes "\\(s_\\|m_\\)\\(.*\\)"
   "this variable contains a regular expression matching the java field
   prefixes. The prefixes get removed when using yasnippet to generate

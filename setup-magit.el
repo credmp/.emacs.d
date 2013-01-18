@@ -76,5 +76,8 @@
 
 (define-key magit-status-mode-map (kbd "W") 'magit-toggle-whitespace)
 
+(custom-set-faces
+ '(magit-item-highlight ((t (:background "#1b333e" :foreground "white")))))
+
 
 (provide 'setup-magit)
