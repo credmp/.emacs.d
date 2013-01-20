@@ -104,7 +104,7 @@
 (require 'setup-eclim)
 (require 'setup-hexcolour)
 (require 'setup-powerline)
-(require 'ecb)
+(require 'setup-ecb)
 
 (global-ede-mode t)
 
