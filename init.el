@@ -25,6 +25,7 @@
 (add-to-list 'load-path site-lisp-dir)
 
 ;; Settings for currently logged in user
+
 (setq user-settings-dir (concat user-emacs-directory "users/" user-login-name))
 (add-to-list 'load-path user-settings-dir)
 
@@ -103,6 +104,9 @@
 (require 'setup-eclim)
 (require 'setup-hexcolour)
 (require 'setup-powerline)
+(require 'ecb)
+
+(global-ede-mode t)
 
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
