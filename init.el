@@ -1,6 +1,7 @@
 ;; Arjen's .emacs <arjen@wiersma.org>
 ;; Started in june 2000, Last modification:
 ;; Time-stamp: <2012-09-25 15:26:24 (arjen)>
+;;
 ;; Now based on magnars's .emacs.d setup
 ;; https://github.com/magnars/.emacs.d
 
@@ -105,8 +106,6 @@
 (require 'setup-hexcolour)
 (require 'setup-powerline)
 (require 'setup-ecb)
-
-(global-ede-mode t)
 
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
