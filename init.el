@@ -72,6 +72,7 @@
    (cons 'clojure-test-mode melpa)
    (cons 'nrepl melpa)
    (cons 'auto-complete melpa)
+   (cons 'xml-rpc melpa)
    (cons 'company gnu)
 ))
 
