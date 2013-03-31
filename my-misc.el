@@ -51,4 +51,9 @@
                   (get-char-property (point) 'face))))
     (if face (message "Face: %s" face) (message "No face at %d" pos))))
 
+(defun arjen/recompile-emacs-d ()
+  "Recompile all source files under .emacs.d"
+  (interactive)
+  (byte-recompile-directory "~/.emacs.d"))
+
 (provide 'my-misc)
