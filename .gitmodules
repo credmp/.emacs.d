@@ -127,3 +127,6 @@
 [submodule "site-lisp/ecb"]
 	path = site-lisp/ecb
 	url = https://github.com/alexott/ecb/
+[submodule "site-lisp/emacs-chess"]
+	path = site-lisp/emacs-chess
+	url = https://github.com/jwiegley/emacs-chess.git
