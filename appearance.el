@@ -8,6 +8,9 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/tomorrow-theme/GNU Emacs/")
 (load-theme 'arjen2 t)
+;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/noctilux-theme")
+;;(load-theme 'noctilux t)
+
 ;;(load-theme 'soothe t)
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/site-lisp/color-theme-solarized")
 ;;(load-theme 'solarized-light t)
@@ -22,7 +25,7 @@
 (set-face-background 'hl-line "#252525")
 
 ;; Highlight in yasnippet
-(set-face-background 'yas/field-highlight-face "#333399")
+;;(set-face-background 'yas/field-highlight-face "#333399")
 
 (set-face-foreground 'font-lock-warning-face "#ff6666")
 

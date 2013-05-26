@@ -176,7 +176,7 @@
 ;; Diminish modeline clutter
 (require 'diminish)
 (diminish 'wrap-region-mode)
-(diminish 'yas/minor-mode)
+;;(diminish 'yas/minor-mode)
 
 ;; Conclude init by setting up specifics for the current user
 (when (file-exists-p user-settings-dir)
