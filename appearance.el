@@ -7,7 +7,9 @@
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/tomorrow-theme/GNU Emacs/")
-(load-theme 'arjen2 t)
+;;(load-theme 'arjen2 t)
+(load-theme 'fogus t)
+
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/noctilux-theme")
 ;;(load-theme 'noctilux t)
 
