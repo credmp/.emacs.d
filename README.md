@@ -1,3 +1,5 @@
+# This repository is OBSOLETE
+
 # My emacs settings
 
 An ever-changing set of emacs settings. Micro-optimizations are super fun.
